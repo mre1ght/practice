@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design mock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <dl>
+    <dt>&nbsp;&emsp;CRANET&nbsp;&emsp;集約パネル&nbsp;&emsp;v1</dt>
+    <br>
+    
+    <dd class="box-straight">旋回ブレーキ&nbsp;&emsp;
+      <span class="container">
+        <span class="box-1">ON</span>
+        <span class="box-2">OFF</span>
+      </span>
+    </dd>
+      <dd class="box-straight">&nbsp;&emsp;&nbsp;&emsp;&nbsp;&emsp;ストップスイッチ&nbsp;&emsp;
+      <span class="container">
+        <span class="box-1">ON</span>
+        <span class="box-2">OFF</span>
+      </span>
+    </dd>
+    <br>
+    <dd class="box-straight">旋回フリー&nbsp;&emsp;&nbsp;&emsp;
+      <span class="container">
+        <span class="box-1">ON</span>
+        <span class="box-2">OFF</span>
+      </span>
+      </dd>
+      &nbsp;&emsp;&nbsp;&emsp;&nbsp;&emsp;AML解除&nbsp;&emsp;&nbsp;&emsp;&nbsp;&emsp;
+      <span class="container">
+        <span class="box-1">ON</span>
+        <span class="box-2">OFF</span>
+      </span>
+    </dd>
+  </dl>
+
+  <script>
+   const box1 = document.querySelectorAll('.box-1');
+const box2 = document.querySelectorAll('.box-2');
+
+const brakeBox1 = box1[0];
+const brakeBox2 = box2[0];
+const stopBox1 = box1[1];
+const stopBox2 = box2[1];
+
+brakeBox1.addEventListener('click', () => {
+  brakeBox1.classList.toggle('clicked');
+  brakeBox2.classList.remove('clicked');
+});
+
+brakeBox2.addEventListener('click', () => {
+  brakeBox2.classList.toggle('clicked');
+  brakeBox1.classList.remove('clicked');
+});
+
+stopBox1.addEventListener('click', () => {
+  stopBox1.classList.toggle('clicked');
+  stopBox2.classList.remove('clicked');
+});
+
+stopBox2.addEventListener('click', () => {
+  stopBox2.classList.toggle('clicked');
+  stopBox1.classList.remove('clicked');
+});
+  </script>
+</body>
+</html>

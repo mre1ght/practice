@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+
+dl {
+  margin-bottom: 0.5em;
+  border: 1px solid black;
+  padding: 1.2em 1.2em;
+  background: #e7eaeb;
+}
+
+.box-straight {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+}
+.box-1, .box-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  margin: 0;
+  background: white;
+  border: 1px solid black;
+}
+
+.box-1 + .box-2 {
+  margin-left: 0;
+}
+.box-1.clicked {
+  background: red;
+}
+
+.box-2.clicked {
+  background: blue;
+}
+
+
+
