@@ -35,7 +35,7 @@
           <span class="switch-off">OFF</span>
         </span>
       </div>
-      AML解除
+        AML解除
       <span class="container">
         <span class="switch-on">ON</span>
         <span class="switch-off">OFF</span>
@@ -50,18 +50,39 @@ const switchOffBoxes= document.querySelectorAll('.switch-off');
 
 const brakeBox1 = switchOnBoxes[0];
 const brakeBox2 = switchOffBoxes[0];
+const brakeBox3 = switchOnBoxes[2];
+const brakeBox4 = switchOffBoxes[2];
+
 const stopBox1 = switchOnBoxes[1];
 const stopBox2 = switchOffBoxes[1];
+const stopBox3 = switchOnBoxes[3];
+const stopBox4 = switchOffBoxes[3];
+
+
 
 brakeBox1.addEventListener('click', () => {
+  console.log("brake box 1 clicked");
   brakeBox1.classList.toggle('clicked');
   brakeBox2.classList.remove('clicked');
 });
 
 brakeBox2.addEventListener('click', () => {
+  console.log("brake box 2 clicked");
   brakeBox2.classList.toggle('clicked');
   brakeBox1.classList.remove('clicked');
 });
+brakeBox3.addEventListener('click', () => {
+  console.log("brake box 3 clicked");
+  brakeBox3.classList.toggle('clicked');
+  brakeBox4.classList.remove('clicked');
+});
+
+brakeBox4.addEventListener('click', () => {
+  console.log("brake box 4 clicked");
+  brakeBox4.classList.toggle('clicked');
+  brakeBox3.classList.remove('clicked');
+});
+
 
 stopBox1.addEventListener('click', () => {
   stopBox1.classList.toggle('clicked');
@@ -71,6 +92,15 @@ stopBox1.addEventListener('click', () => {
 stopBox2.addEventListener('click', () => {
   stopBox2.classList.toggle('clicked');
   stopBox1.classList.remove('clicked');
+});
+stopBox3.addEventListener('click', () => {
+  stopBox3.classList.toggle('clicked');
+  stopBox4.classList.remove('clicked');
+});
+
+stopBox4.addEventListener('click', () => {
+  stopBox4.classList.toggle('clicked');
+  stopBox3.classList.remove('clicked');
 });
   </script>
 </body>
