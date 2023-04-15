@@ -1,13 +1,16 @@
 @charset "utf-8";
 
 
-dl {
+.panel {
   margin-bottom: 0.5em;
   border: 1px solid black;
   padding: 1.2em 1.2em;
   background: #e7eaeb;
 }
 
+.panel-row {
+  display: flex;
+}
 .box-straight {
   display: flex;
   align-items: center;
@@ -16,7 +19,7 @@ dl {
 .container {
   display: flex;
 }
-.box-1, .box-2 {
+.switch-on, .switch-off {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,14 +31,14 @@ dl {
   border: 1px solid black;
 }
 
-.box-1 + .box-2 {
+.switch-on + .switch-off {
   margin-left: 0;
 }
-.box-1.clicked {
+.switch-on.clicked {
   background: red;
 }
-
-.box-2.clicked {
+  
+.switch-off.clicked {
   background: blue;
 }
 

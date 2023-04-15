@@ -8,45 +8,50 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <dl>
-    <dt>&nbsp;&emsp;CRANET&nbsp;&emsp;集約パネル&nbsp;&emsp;v1</dt>
+  <div class="panel"  >
+    <div>CRANET&nbsp;&emsp;集約パネルv1</div>
     <br>
-    
-    <dd class="box-straight">旋回ブレーキ&nbsp;&emsp;
+    <div class="panel-row">
+      <div class="box-straight">
+        旋回ブレーキ
+        <span class="container">
+          <span class="switch-on">ON</span>
+          <span class="switch-off">OFF</span>
+        </span>
+      </div>
+      <div class="box-straight">
+        ストップスイッチ
+        <span class="container">
+          <span class="switch-on">ON</span>
+          <span class="switch-off">OFF</span>
+        </span>
+      </div>
+    </div>
+    <div class="panel-row">
+      <div id="rotation-free-button" class="box-straight">
+        旋回フリー
+        <span class="container">
+          <span class="switch-on">ON</span>
+          <span class="switch-off">OFF</span>
+        </span>
+      </div>
+      AML解除
       <span class="container">
-        <span class="box-1">ON</span>
-        <span class="box-2">OFF</span>
+        <span class="switch-on">ON</span>
+        <span class="switch-off">OFF</span>
       </span>
-    </dd>
-      <dd class="box-straight">&nbsp;&emsp;&nbsp;&emsp;&nbsp;&emsp;ストップスイッチ&nbsp;&emsp;
-      <span class="container">
-        <span class="box-1">ON</span>
-        <span class="box-2">OFF</span>
-      </span>
-    </dd>
-    <br>
-    <dd class="box-straight">旋回フリー&nbsp;&emsp;&nbsp;&emsp;
-      <span class="container">
-        <span class="box-1">ON</span>
-        <span class="box-2">OFF</span>
-      </span>
-      </dd>
-      &nbsp;&emsp;&nbsp;&emsp;&nbsp;&emsp;AML解除&nbsp;&emsp;&nbsp;&emsp;&nbsp;&emsp;
-      <span class="container">
-        <span class="box-1">ON</span>
-        <span class="box-2">OFF</span>
-      </span>
-    </dd>
-  </dl>
+    </div>
+  </div>
+</div>
 
-  <script>
-   const box1 = document.querySelectorAll('.box-1');
-const box2 = document.querySelectorAll('.box-2');
+<script>
+const switchOnBoxes = document.querySelectorAll('.switch-on');
+const switchOffBoxes= document.querySelectorAll('.switch-off');
 
-const brakeBox1 = box1[0];
-const brakeBox2 = box2[0];
-const stopBox1 = box1[1];
-const stopBox2 = box2[1];
+const brakeBox1 = switchOnBoxes[0];
+const brakeBox2 = switchOffBoxes[0];
+const stopBox1 = switchOnBoxes[1];
+const stopBox2 = switchOffBoxes[1];
 
 brakeBox1.addEventListener('click', () => {
   brakeBox1.classList.toggle('clicked');
