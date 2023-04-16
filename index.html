@@ -62,8 +62,7 @@
         <button type="button" class="switch-off">OFF</button>
       </span>
     </div>
-    <div class="control-container">
-    </div>
+    <div class="control-container"></div>
     <div class="control-container">
       S高速巻き下げ
       <span class="switch-container">
@@ -71,160 +70,61 @@
         <button type="button" class="switch-off">OFF</button>
       </span>
     </div>
-    <div class="contorol-container">
-    </div>
+    <div class="contorol-container"></div>
     <div class="control-container">
       アイドルボリューム
       <span class="switch-container">
         <button type="button" class="switch-on">UP</button>
         <button type="button" class="switch-off">DOWN</button>
       </span>
-      </div>
-      <div class="control-container">
-      </div>
-      
-      <div class="control-container-last"> 
-        <div class="text">巻き過&nbsp;&emsp;解除</div>
-        <div class="circle"><span>解除</span></div>
-      </div>
-  
-   
+    </div>
+    <div class="control-container"></div>
+    <div class="control-container-last"> 
+      <div class="text">巻き過&nbsp;&emsp;解除</div>
+      <div class="circle"><span>解除</span></div>
+    </div>
   </div>
 </div>
 
 <script>
-const switchOnBoxes = document.querySelectorAll('.switch-on');
-const switchOffBoxes= document.querySelectorAll('.switch-off');
-const selectBox1= document.querySelectorAll('.select-1');
-const selectBox2= document.querySelectorAll('.select-2');
-const selectBox3= document.querySelectorAll('.select-3');
-
-const brakeBox1 = switchOnBoxes[0];
-const brakeBox2 = switchOffBoxes[0];
-const brakeBox3 = switchOnBoxes[2];
-const brakeBox4 = switchOffBoxes[2];
-const brakeBox5 = switchOnBoxes[4];
-const brakeBox6 = switchOffBoxes[4];
-const brakeBox7 = switchOnBoxes[6];
-const brakeBox8 = switchOffBoxes[6];
-
-const stopBox1 = switchOnBoxes[1];
-const stopBox2 = switchOffBoxes[1];
-const stopBox3 = switchOnBoxes[3];
-const stopBox4 = switchOffBoxes[3];
-const stopBox5 = switchOnBoxes[5];
-const stopBox6 = switchOffBoxes[5];
-const stopBox7 = switchOnBoxes[7];
-const stopBox8 = switchOffBoxes[7];
-
-const select1Box1 = selectBox1[0];
-const select1Box2 = selectBox2[0];
-const select1Box3 = selectBox3[0];
-const select2Box1 = selectBox1[1];
-const select2Box2 = selectBox2[1];
-const select2Box3 = selectBox3[1];
-
-
-brakeBox1.addEventListener('click', () => {
-  console.log("brake box 1 clicked");
-  brakeBox1.classList.toggle('clicked');
-  brakeBox2.classList.remove('clicked');
-});
-
-brakeBox2.addEventListener('click', () => {
-  console.log("brake box 2 clicked");
-  brakeBox2.classList.toggle('clicked');
-  brakeBox1.classList.remove('clicked');
-});
-brakeBox3.addEventListener('click', () => {
-  console.log("brake box 3 clicked");
-  brakeBox3.classList.toggle('clicked');
-  brakeBox4.classList.remove('clicked');
-});
-
-brakeBox4.addEventListener('click', () => {
-  console.log("brake box 3 clicked");
-  brakeBox4.classList.toggle('clicked');
-  brakeBox3.classList.remove('clicked');
-});
-brakeBox5.addEventListener('click', () => {
-  console.log("brake box 5 clicked");
-  brakeBox5.classList.toggle('clicked');
-  brakeBox6.classList.remove('clicked');
-});
-brakeBox6.addEventListener('click', () => {
-  console.log("brake box 6 clicked");
-  brakeBox6.classList.toggle('clicked');
-  brakeBox5.classList.remove('clicked');
-});
-brakeBox7.addEventListener('click', () => {
-  console.log("brake box 7 clicked");
-  brakeBox7.classList.toggle('clicked');
-  brakeBox8.classList.remove('clicked');
-});
-brakeBox8.addEventListener('click', () => {
-  console.log("brake box 8 clicked");
-  brakeBox8.classList.toggle('clicked');
-  brakeBox7.classList.remove('clicked');
-});
-
-select1Box1.addEventListener('click', () => {
-  console.log("select-1 box 1 clicked");
-  select1Box1.classList.toggle('clicked');
-  select1Box2.classList.remove('clicked');
-  select1Box3.classList.remove('clicked');
-});
-select1Box2.addEventListener('click', () => {
-  console.log("select-2 box 1 clicked");
-  select1Box2.classList.toggle('clicked');
-  select1Box1.classList.remove('clicked');
-  select1Box3.classList.remove('clicked');
-});
-select1Box3.addEventListener('click', () => {
-  console.log("select-3 box 1 clicked");
-  select1Box3.classList.toggle('clicked');
-  select1Box1.classList.remove('clicked');
-  select1Box2.classList.remove('clicked');
-});
-select2Box1.addEventListener('click', () => {
-  console.log("select-1 box 2 clicked");
-  select2Box1.classList.toggle('clicked');
-  select2Box2.classList.remove('clicked');
-  select2Box3.classList.remove('clicked');
-});
-
-select2Box2.addEventListener('click', () => {
-  console.log("select-2 box 2 clicked");
-  select2Box2.classList.toggle('clicked');
-  select2Box1.classList.remove('clicked');
-  select2Box3.classList.remove('clicked');
-});
-
-select2Box3.addEventListener('click', () => {
-  console.log("select-3 box 2 clicked");
-  select2Box3.classList.toggle('clicked');
-  select2Box1.classList.remove('clicked');
-  select2Box2.classList.remove('clicked');
-});
-
-stopBox1.addEventListener('click', () => {
-  stopBox1.classList.toggle('clicked');
-  stopBox2.classList.remove('clicked');
-});
-
-stopBox2.addEventListener('click', () => {
-  stopBox2.classList.toggle('clicked');
-  stopBox1.classList.remove('clicked');
-});
-stopBox3.addEventListener('click', () => {
-  stopBox3.classList.toggle('clicked');
-  stopBox4.classList.remove('clicked');
-});
-
-stopBox4.addEventListener('click', () => {
-  stopBox4.classList.toggle('clicked');
-  stopBox3.classList.remove('clicked');
-});
-  </script>
+const switchContainerList = document.querySelectorAll(".switch-container");
+for(let i = 0; i < switchContainerList.length; i++) {
+  const switchContainer = switchContainerList[i];
+  const switchOnButton = switchContainer.querySelector(".switch-on");
+  const switchOffButton = switchContainer.querySelector(".switch-off");
+  switchOffButton.classList.add("clicked");
+  switchOffButton.onclick = function() {
+    switchOffButton.classList.add("clicked");
+    switchOnButton.classList.remove("clicked");
+  }
+  switchOnButton.onclick = function() {
+    switchOnButton.classList.add("clicked");
+    switchOffButton.classList.remove("clicked");
+  }
+}
+const selectContainerList = document.querySelectorAll(".select-container");
+for(let i = 0; i < selectContainerList.length; i++) {
+  const selectContainer = selectContainerList[i];
+  const select1 = selectContainer.querySelector(".select-1");
+  const select2 = selectContainer.querySelector(".select-2");
+  const select3 = selectContainer.querySelector(".select-3");
+  select1.classList.add("clicked");
+  select1.onclick = function() {
+    select1.classList.add("clicked");
+    select2.classList.remove("clicked");
+    select3.classList.remove("clicked"); 
+  }
+  select2.onclick = function() {
+    select1.classList.remove("clicked");
+    select2.classList.add("clicked");
+    select3.classList.remove("clicked"); 
+  }
+  select3.onclick = function() {
+    select1.classList.remove("clicked");
+    select2.classList.remove("clicked");
+    select3.classList.add("clicked"); 
+  }
+}
+</script>
 </body>
 </html>
