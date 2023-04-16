@@ -9,9 +9,8 @@
 </head>
 <body>
   <div class="panel"  >
-    <div>CRANET&nbsp;&emsp;集約パネルv1</div>
-    <br>
-    <div class="panel-row">
+    <div class="panel-title">CRANET&nbsp;&emsp;集約パネル&nbsp;&emsp;v1</div>   
+    <div class="panel-container">
       <div class="box-straight">
         旋回ブレーキ
         <span class="container">
@@ -26,8 +25,6 @@
           <span class="switch-off">OFF</span>
         </span>
       </div>
-    </div>
-    <div class="panel-row">
       <div id="rotation-free-button" class="box-straight">
         旋回フリー
         <span class="container">
@@ -35,10 +32,27 @@
           <span class="switch-off">OFF</span>
         </span>
       </div>
+      <div class="box-straight">
         AML解除
+        <span class="container">
+          <span class="switch-on">ON</span>
+          <span class="switch-off">OFF</span>
+        </span>
+    </div>
+    <div class="box-straight">
+      ブーム&nbsp;&emsp;ジブ&nbsp;&emsp;選択
       <span class="container">
-        <span class="switch-on">ON</span>
-        <span class="switch-off">OFF</span>
+        <span class="select-1">1</span>
+        <span class="select-2">2</span>
+        <span class="select-3">3</span>
+      </span>
+    </div>
+    <div class="box-straight">
+      配列を選ぶ
+      <span class="container">
+        <span class="select-1">ISO</span>
+        <span class="select-2">タダノ</span>
+        <span class="select-3">カスタム</span>
       </span>
     </div>
   </div>
@@ -47,6 +61,9 @@
 <script>
 const switchOnBoxes = document.querySelectorAll('.switch-on');
 const switchOffBoxes= document.querySelectorAll('.switch-off');
+const selectBox1= document.querySelectorAll('.select-1');
+const selectBox2= document.querySelectorAll('.select-2');
+const selectBox3= document.querySelectorAll('.select-3');
 
 const brakeBox1 = switchOnBoxes[0];
 const brakeBox2 = switchOffBoxes[0];
@@ -58,6 +75,12 @@ const stopBox2 = switchOffBoxes[1];
 const stopBox3 = switchOnBoxes[3];
 const stopBox4 = switchOffBoxes[3];
 
+const select1Box1 = selectBox1[0];
+const select1Box2 = selectBox2[0];
+const select1Box3 = selectBox3[0];
+const select2Box1 = selectBox1[1];
+const select2Box2 = selectBox2[1];
+const select2Box3 = selectBox3[1];
 
 
 brakeBox1.addEventListener('click', () => {
@@ -78,11 +101,48 @@ brakeBox3.addEventListener('click', () => {
 });
 
 brakeBox4.addEventListener('click', () => {
-  console.log("brake box 4 clicked");
+  console.log("brake box 3 clicked");
   brakeBox4.classList.toggle('clicked');
   brakeBox3.classList.remove('clicked');
 });
+select1Box1.addEventListener('click', () => {
+  console.log("select-1 box 1 clicked");
+  select1Box1.classList.toggle('clicked');
+  select1Box2.classList.remove('clicked');
+  select1Box3.classList.remove('clicked');
+});
+select1Box2.addEventListener('click', () => {
+  console.log("select-2 box 1 clicked");
+  select1Box2.classList.toggle('clicked');
+  select1Box1.classList.remove('clicked');
+  select1Box3.classList.remove('clicked');
+});
+select1Box3.addEventListener('click', () => {
+  console.log("select-3 box 1 clicked");
+  select1Box3.classList.toggle('clicked');
+  select1Box1.classList.remove('clicked');
+  select1Box2.classList.remove('clicked');
+});
+select2Box1.addEventListener('click', () => {
+  console.log("select-1 box 2 clicked");
+  select2Box1.classList.toggle('clicked');
+  select2Box2.classList.remove('clicked');
+  select2Box3.classList.remove('clicked');
+});
 
+select2Box2.addEventListener('click', () => {
+  console.log("select-2 box 2 clicked");
+  select2Box2.classList.toggle('clicked');
+  select2Box1.classList.remove('clicked');
+  select2Box3.classList.remove('clicked');
+});
+
+select2Box3.addEventListener('click', () => {
+  console.log("select-3 box 2 clicked");
+  select2Box3.classList.toggle('clicked');
+  select2Box1.classList.remove('clicked');
+  select2Box2.classList.remove('clicked');
+});
 
 stopBox1.addEventListener('click', () => {
   stopBox1.classList.toggle('clicked');
