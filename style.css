@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-body{
-  font-size:1rem;
-}
 .panel {
   margin-bottom: 0.5em;
   border: 1px solid black;
@@ -15,14 +12,11 @@ body{
   margin-top: 1em;
 }
 
-.panel-row {
-  display: flex;
-}
 .panel-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.box-straight {
+.control-container {
   align-items: center;
   margin-top: 0.9em;
   margin-left: 1.5em;
@@ -30,7 +24,7 @@ body{
   justify-content: space-between;
   font-size: 1rem;
 }
-.box-straight-last {
+.control-container-last {
   align-items: center;
   margin-top: 2.5em;
   margin-left: 1.5em;
