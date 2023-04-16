@@ -1,14 +1,18 @@
 @charset "utf-8";
 
-
+body{
+  font-size:1rem;
+}
 .panel {
   margin-bottom: 0.5em;
   border: 1px solid black;
-  padding: 1.2em 1.2em;
+  padding: 1.2em 1.2em 2.4em;
   background: #e7eaeb;
 }
 .panel-title{
   margin-bottom: 2em; 
+  margin-left: 1em;
+  margin-top: 1em;
 }
 
 .panel-row {
@@ -20,20 +24,48 @@
 }
 .box-straight {
   align-items: center;
-  margin-top: 0.75em;
+  margin-top: 0.9em;
+  margin-left: 1.5em;
   display: flex;
   justify-content: space-between;
+  font-size: 1rem;
+}
+.box-straight-last {
+  align-items: center;
+  margin-top: 2.5em;
+  margin-left: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
 }
 
+
+.circle {
+  position: absolute;
+  left: 280px;
+  width: 60px;
+  height: 60px;
+  background: blue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+.circle span {
+  writing-mode: vertical-rl;
+  color: white;
+}
 .container {
   display: flex;
-  margin-right: 40%;
+  margin-right: 28%;
+  font-size: 1rem;
 }
 .switch-on, .switch-off {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
+  width: 80px;
   height: 30px;
   padding: 5px;
   margin: 0;
@@ -48,7 +80,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
+  width: 80px;
   height: 30px;
   padding: 5px;
   margin: 0;

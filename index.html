@@ -55,6 +55,40 @@
         <span class="select-3">カスタム</span>
       </span>
     </div>
+    <div class="box-straight">
+      M高速巻き下げ
+      <span class="container">
+        <span class="switch-on">ON</span>
+        <span class="switch-off">OFF</span>
+      </span>
+    </div>
+    <div class="box-straight">
+    </div>
+    <div class="box-straight">
+      S高速巻き下げ
+      <span class="container">
+        <span class="switch-on">ON</span>
+        <span class="switch-off">OFF</span>
+      </span>
+    </div>
+    <div class="box-straight">
+    </div>
+    <div class="box-straight">
+      アイドルボリューム
+      <span class="container">
+        <span class="switch-on">UP</span>
+        <span class="switch-off">DOWN</span>
+      </span>
+      </div>
+      <div class="box-straight">
+      </div>
+      
+      <div class="box-straight-last"> 
+        <div class="text">巻き過&nbsp;&emsp;解除</div>
+        <div class="circle"><span>解除</span></div>
+      </div>
+  
+   
   </div>
 </div>
 
@@ -69,11 +103,19 @@ const brakeBox1 = switchOnBoxes[0];
 const brakeBox2 = switchOffBoxes[0];
 const brakeBox3 = switchOnBoxes[2];
 const brakeBox4 = switchOffBoxes[2];
+const brakeBox5 = switchOnBoxes[4];
+const brakeBox6 = switchOffBoxes[4];
+const brakeBox7 = switchOnBoxes[6];
+const brakeBox8 = switchOffBoxes[6];
 
 const stopBox1 = switchOnBoxes[1];
 const stopBox2 = switchOffBoxes[1];
 const stopBox3 = switchOnBoxes[3];
 const stopBox4 = switchOffBoxes[3];
+const stopBox5 = switchOnBoxes[5];
+const stopBox6 = switchOffBoxes[5];
+const stopBox7 = switchOnBoxes[7];
+const stopBox8 = switchOffBoxes[7];
 
 const select1Box1 = selectBox1[0];
 const select1Box2 = selectBox2[0];
@@ -105,6 +147,27 @@ brakeBox4.addEventListener('click', () => {
   brakeBox4.classList.toggle('clicked');
   brakeBox3.classList.remove('clicked');
 });
+brakeBox5.addEventListener('click', () => {
+  console.log("brake box 5 clicked");
+  brakeBox5.classList.toggle('clicked');
+  brakeBox6.classList.remove('clicked');
+});
+brakeBox6.addEventListener('click', () => {
+  console.log("brake box 6 clicked");
+  brakeBox6.classList.toggle('clicked');
+  brakeBox5.classList.remove('clicked');
+});
+brakeBox7.addEventListener('click', () => {
+  console.log("brake box 7 clicked");
+  brakeBox7.classList.toggle('clicked');
+  brakeBox8.classList.remove('clicked');
+});
+brakeBox8.addEventListener('click', () => {
+  console.log("brake box 8 clicked");
+  brakeBox8.classList.toggle('clicked');
+  brakeBox7.classList.remove('clicked');
+});
+
 select1Box1.addEventListener('click', () => {
   console.log("select-1 box 1 clicked");
   select1Box1.classList.toggle('clicked');
