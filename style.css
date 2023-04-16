@@ -1,5 +1,7 @@
 @charset "utf-8";
-
+button{
+  padding:0;
+}
 .panel {
   margin-bottom: 0.5em;
   border: 1px solid black;
@@ -28,7 +30,7 @@
 }
 
 .margin-close{
-  margin-right:25%;
+  margin-right:20%;
 }
 
 .margin-close-mini{
@@ -46,7 +48,7 @@
 
 .circle {
   position: absolute;
-  left: 280px;
+  left: 15rem;
   width: 60px;
   height: 60px;
   background: blue;
@@ -69,8 +71,8 @@
 }
 
 .switch-on, .switch-off {
-  width: 80px;
-  height: 30px;
+  width: 4.6rem;
+  height: 2.3rem;
   margin: 0;
   background: white;
   border: 1px solid black;
@@ -92,8 +94,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 30px;
+  width: 4.2rem;
+  height: 2.3rem;
   margin: 0;
   background: white;
   border: 1px solid black;
