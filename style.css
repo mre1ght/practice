@@ -6,6 +6,7 @@
   padding: 1.2em 1.2em 2.4em;
   background: #e7eaeb;
 }
+
 .panel-title{
   margin-bottom: 2em; 
   margin-left: 1em;
@@ -16,23 +17,32 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 .control-container {
-  align-items: center;
+  font-size: 1rem;
   margin-top: 0.9em;
   margin-left: 1.5em;
   display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-}
-.control-container-last {
   align-items: center;
+  justify-content: space-between;
+}
+
+.margin-close{
+  margin-right:25%;
+}
+
+.margin-close-mini{
+  margin-right:15%;
+}
+
+.control-container-last {
+  font-size: 1rem;
   margin-top: 2.5em;
   margin-left: 1.5em;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  font-size: 1rem;
 }
-
 
 .circle {
   position: absolute;
@@ -40,40 +50,44 @@
   width: 60px;
   height: 60px;
   background: blue;
+  border: 1px solid black;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
 }
+
 .circle span {
   writing-mode: vertical-rl;
   color: white;
 }
+
 .switch-container {
-  display: flex;
   margin-right: 28%;
   font-size: 1rem;
-}
-.switch-on, .switch-off {
   display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.switch-on, .switch-off {
   width: 80px;
   height: 30px;
   margin: 0;
   background: white;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .switch-on + .switch-off {
   margin-left: 0;
 }
+
 .select-container {
-  display: flex;
-  margin-right: 10%;
   font-size: 1rem;
+  display: flex;
 }
+
 .select-1, .select-2, .select-3 {
   display: flex;
   justify-content: center;
@@ -84,12 +98,15 @@
   background: white;
   border: 1px solid black;
 }
- .select-small {
+
+.select-small {
   font-size: 0.7rem;
 }
+
 .select-1 + .select-2 + .select-3 {
   margin-left: 0;
 }
+
 .switch-on.clicked {
   background: red;
 }
@@ -97,7 +114,8 @@
 .switch-off.clicked {
   background: blue;
 }
-.select-1.clicked, .select-2.clicked, .select-3.clicked{
+
+.select-container > .clicked {
   background: yellow;
 }
 
