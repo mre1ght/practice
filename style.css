@@ -7,12 +7,15 @@ button{
   border: 1px solid black;
   padding: 1.2em 1.2em 2.4em;
   background: #e7eaeb;
+  width: 7.5in;
+  height: 11.1in;
 }
 
 .panel-title{
-  margin-bottom: 2em; 
+  margin-bottom: 1.1em; 
   margin-left: 1em;
   margin-top: 1em;
+  font-size: 1.2rem;
 }
 
 .panel-container {
@@ -20,38 +23,43 @@ button{
   grid-template-columns: 1fr 1fr;
 }
 
+.panel-container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3.3rem;
+}
+.panel-container3 {
+  display: flex;
+}
+
+.text{
+  margin-left:3.4rem;
+  margin-bottom:3.3rem;
+}
+
 .control-container {
   font-size: 1rem;
-  margin-top: 0.9em;
+  margin-top: 1.8em;
   margin-left: 1.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.margin-close{
-  margin-right:20%;
-}
-
-.margin-close-mini{
-  margin-right:15%;
-}
-
-.control-container-last {
+.text2{
   font-size: 1rem;
-  margin-top: 2.5em;
-  margin-left: 1.5em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin-left: 3em;
+  word-spacing: 3.1em;
 }
+
+
 
 .circle {
   position: absolute;
-  left: 15rem;
+  left: 39rem;
   width: 60px;
   height: 60px;
-  background: blue;
+  background: white;
   border: 1px solid black;
   border-radius: 50%;
   display: flex;
@@ -61,16 +69,37 @@ button{
 
 .circle span {
   writing-mode: vertical-rl;
-  color: white;
+  color: black;
 }
 
 .switch-container {
-  margin-right: 28%;
+  margin-right: 6%;
+  font-size: 1rem;
+  display: flex;
+}
+.switch-container-ON {
+  margin-right: 6%;
+  font-size: 1rem;
+  display: flex;
+}
+.switch-container-SP {
+  margin-right: 6%;
   font-size: 1rem;
   display: flex;
 }
 
 .switch-on, .switch-off {
+  width: 4.6rem;
+  height: 2.3rem;
+  margin: 0;
+  background: white;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch-up, .switch-down {
   width: 4.6rem;
   height: 2.3rem;
   margin: 0;
@@ -88,19 +117,58 @@ button{
 .select-container {
   font-size: 1rem;
   display: flex;
+  margin-left:3.4rem;
 }
-
+.lever-container {
+  font-size: 1rem;
+  display: flex;
+  margin-left: 10.2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1.9rem; 
+}
+.pedal-container {
+  font-size: 1rem;
+  display: flex;
+  margin-left: 10.2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1.9rem; 
+}
+.lever-container button {
+ margin-right: 1.5rem;
+}
+.pedal-container button {
+  margin-right: 1.3rem;
+ }
 .select-1, .select-2, .select-3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4.2rem;
+  width: 6.3rem;
   height: 2.3rem;
   margin: 0;
   background: white;
   border: 1px solid black;
 }
-
+.lever-1, .lever-2, .lever-3, .lever-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.8rem;
+  height: 2.3rem;
+  margin-left: 1.2rem;
+  background: white;
+  border: 1px solid black;
+}
+.pedal-1, .pedal-2, .pedal-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.8rem;
+  height: 2.3rem;
+  margin-left: 1.2rem;
+  background: white;
+  border: 1px solid black;
+}
 .select-small {
   font-size: 0.7rem;
 }
@@ -120,4 +188,19 @@ button{
 .select-container > .clicked {
   background: yellow;
 }
+.save-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.save-settings {
+  width: 11rem;
+  height: 2.3rem;
+  margin-top: 1.0rem;
+  background: white;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
