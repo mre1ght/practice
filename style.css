@@ -188,6 +188,9 @@ button{
 .select-container > .clicked {
   background: yellow;
 }
+.switch-container-SP > .clicked {
+  background: yellow;
+}
 .save-box{
   display: flex;
   justify-content: center;

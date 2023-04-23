@@ -54,31 +54,25 @@ for(let i = 0; i < selectContainerList.length; i++) {
   }
 }
 
+function handleSwitchClick(event) {
+  const switchElement = event.target;
+  switchElement.style.backgroundColor = 'yellow';
+
+  function resetSwitchColor() {
+    switchElement.style.backgroundColor = 'white';
+    switchElement.removeEventListener('mouseup', resetSwitchColor);
+    switchElement.removeEventListener('mouseleave', resetSwitchColor);
+  }
+  switchElement.addEventListener('mouseup', resetSwitchColor);
+  switchElement.addEventListener('mouseleave', resetSwitchColor);
+}
+
 const switchUp = document.querySelector('.switch-up');
+switchUp.addEventListener('mousedown', handleSwitchClick);
 const switchDown = document.querySelector('.switch-down');
-const switchContainerSP = document.querySelector('.switch-container-SP');
-
-function setColorYellow() {
-switchContainerSP.style.backgroundColor = 'yellow';
-}
-
-function setColorWhite() {
-switchContainerSP.style.backgroundColor = 'white';
-}
-
-console.log(switchUp);
-switchUp.addEventListener('mousedown', setColorYellow);
-switchDown.addEventListener('mousedown', setColorYellow);
-
-switchUp.addEventListener('mouseup', setColorWhite);
-switchDown.addEventListener('mouseup', setColorWhite);
-
-switchUp.addEventListener('mouseleave', setColorWhite);
-switchDown.addEventListener('mouseleave', setColorWhite);
-
+switchDown.addEventListener('mousedown', handleSwitchClick);
 
 const circle = document.querySelector('.circle');
-
 circle.addEventListener('mousedown', () => {
   circle.style.backgroundColor = 'yellow';
 });
