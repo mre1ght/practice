@@ -54,23 +54,18 @@ for(let i = 0; i < selectContainerList.length; i++) {
   }
 }
 
-function handleSwitchClick(event) {
-  const switchElement = event.target;
-  switchElement.style.backgroundColor = 'yellow';
-
-  function resetSwitchColor() {
-    switchElement.style.backgroundColor = 'white';
-    switchElement.removeEventListener('mouseup', resetSwitchColor);
-    switchElement.removeEventListener('mouseleave', resetSwitchColor);
+function registerSwitchEvents(target) {
+  function resetColor() {
+    target.style.backgroundColor = 'white';
   }
-  switchElement.addEventListener('mouseup', resetSwitchColor);
-  switchElement.addEventListener('mouseleave', resetSwitchColor);
+  target.addEventListener("mousedown", () => {
+    target.style.backgroundColor = 'yellow';
+  });
+  target.addEventListener("mouseup", resetColor);
+  target.addEventListener("mouseleave", resetColor);
 }
-
-const switchUp = document.querySelector('.switch-up');
-switchUp.addEventListener('mousedown', handleSwitchClick);
-const switchDown = document.querySelector('.switch-down');
-switchDown.addEventListener('mousedown', handleSwitchClick);
+registerSwitchEvents(document.querySelector('.switch-up'));
+registerSwitchEvents(document.querySelector('.switch-down'));
 
 const circle = document.querySelector('.circle');
 circle.addEventListener('mousedown', () => {
@@ -81,4 +76,23 @@ circle.addEventListener('mouseup', () => {
 });
 circle.addEventListener('mouseleave', () => {
   circle.style.backgroundColor = 'white';
+});
+
+
+const button = document.querySelector(".select-container:last-of-type .select-3");
+let isDisplayed = false;
+
+button.addEventListener("click", () => {
+  const elements = document.querySelectorAll(".panel-container3, .lever-container, .pedal-container, .save-settings");
+  if (!isDisplayed) {
+    elements.forEach(element => {
+      element.style.display = "flex";
+    });
+    isDisplayed = true;
+  } else {
+    elements.forEach(element => {
+      element.style.display = "none";
+    });
+    isDisplayed = false;
+  }
 });

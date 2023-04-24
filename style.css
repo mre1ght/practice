@@ -38,7 +38,7 @@ button{
 }
 
 .control-container {
-  font-size: 1rem;
+ 
   margin-top: 1.8em;
   margin-left: 1.5em;
   display: flex;
@@ -149,6 +149,7 @@ button{
   background: white;
   border: 1px solid black;
 }
+
 .lever-1, .lever-2, .lever-3, .lever-4 {
   display: flex;
   justify-content: center;
@@ -168,9 +169,6 @@ button{
   margin-left: 1.2rem;
   background: white;
   border: 1px solid black;
-}
-.select-small {
-  font-size: 0.7rem;
 }
 
 .select-1 + .select-2 + .select-3 {
@@ -207,3 +205,13 @@ button{
   justify-content: center;
   align-items: center;
 }
+
+.panel-container3, .lever-container, .pedal-container,
+.save-settings {
+  display: none;
+}
+.select-3:focus ~ .panel-container3, .select-3:focus ~ 
+.lever-container, .select-3:focus ~ .pedal-container {
+  display: flex;
+}
+ 
